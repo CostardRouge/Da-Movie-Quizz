@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE1F385E1BA7255E00601B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F385D1BA7255E00601B81 /* AppDelegate.swift */; };
+		FE1F38601BA7255E00601B81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F385F1BA7255E00601B81 /* FirstViewController.swift */; };
+		FE1F38621BA7255E00601B81 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38611BA7255E00601B81 /* SecondViewController.swift */; };
+		FE1F38651BA7255E00601B81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38631BA7255E00601B81 /* Main.storyboard */; };
+		FE1F38671BA7255E00601B81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38661BA7255E00601B81 /* Images.xcassets */; };
+		FE1F386A1BA7255E00601B81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38681BA7255E00601B81 /* LaunchScreen.xib */; };
+		FE1F38761BA7255E00601B81 /* Da_Movie_QuizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38751BA7255E00601B81 /* Da_Movie_QuizzTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE1F38701BA7255E00601B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE1F38501BA7255E00601B81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE1F38571BA7255E00601B81;
+			remoteInfo = "Da-Movie-Quizz";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE1F38581BA7255E00601B81 /* Da-Movie-Quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Da-Movie-Quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1F385C1BA7255E00601B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE1F385D1BA7255E00601B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE1F385F1BA7255E00601B81 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		FE1F38611BA7255E00601B81 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FE1F38641BA7255E00601B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE1F38661BA7255E00601B81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE1F38691BA7255E00601B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FE1F386F1BA7255E00601B81 /* Da-Movie-QuizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Da-Movie-QuizzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1F38741BA7255E00601B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE1F38751BA7255E00601B81 /* Da_Movie_QuizzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Da_Movie_QuizzTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE1F38551BA7255E00601B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE1F386C1BA7255E00601B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE1F384F1BA7255E00601B81 = {
+			isa = PBXGroup;
+			children = (
+				FE1F385A1BA7255E00601B81 /* Da-Movie-Quizz */,
+				FE1F38721BA7255E00601B81 /* Da-Movie-QuizzTests */,
+				FE1F38591BA7255E00601B81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE1F38591BA7255E00601B81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F38581BA7255E00601B81 /* Da-Movie-Quizz.app */,
+				FE1F386F1BA7255E00601B81 /* Da-Movie-QuizzTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE1F385A1BA7255E00601B81 /* Da-Movie-Quizz */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F385D1BA7255E00601B81 /* AppDelegate.swift */,
+				FE1F385F1BA7255E00601B81 /* FirstViewController.swift */,
+				FE1F38611BA7255E00601B81 /* SecondViewController.swift */,
+				FE1F38631BA7255E00601B81 /* Main.storyboard */,
+				FE1F38661BA7255E00601B81 /* Images.xcassets */,
+				FE1F38681BA7255E00601B81 /* LaunchScreen.xib */,
+				FE1F385B1BA7255E00601B81 /* Supporting Files */,
+			);
+			path = "Da-Movie-Quizz";
+			sourceTree = "<group>";
+		};
+		FE1F385B1BA7255E00601B81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F385C1BA7255E00601B81 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE1F38721BA7255E00601B81 /* Da-Movie-QuizzTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F38751BA7255E00601B81 /* Da_Movie_QuizzTests.swift */,
+				FE1F38731BA7255E00601B81 /* Supporting Files */,
+			);
+			path = "Da-Movie-QuizzTests";
+			sourceTree = "<group>";
+		};
+		FE1F38731BA7255E00601B81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F38741BA7255E00601B81 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE1F38571BA7255E00601B81 /* Da-Movie-Quizz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE1F38791BA7255E00601B81 /* Build configuration list for PBXNativeTarget "Da-Movie-Quizz" */;
+			buildPhases = (
+				FE1F38541BA7255E00601B81 /* Sources */,
+				FE1F38551BA7255E00601B81 /* Frameworks */,
+				FE1F38561BA7255E00601B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Da-Movie-Quizz";
+			productName = "Da-Movie-Quizz";
+			productReference = FE1F38581BA7255E00601B81 /* Da-Movie-Quizz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE1F386E1BA7255E00601B81 /* Da-Movie-QuizzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE1F387C1BA7255E00601B81 /* Build configuration list for PBXNativeTarget "Da-Movie-QuizzTests" */;
+			buildPhases = (
+				FE1F386B1BA7255E00601B81 /* Sources */,
+				FE1F386C1BA7255E00601B81 /* Frameworks */,
+				FE1F386D1BA7255E00601B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE1F38711BA7255E00601B81 /* PBXTargetDependency */,
+			);
+			name = "Da-Movie-QuizzTests";
+			productName = "Da-Movie-QuizzTests";
+			productReference = FE1F386F1BA7255E00601B81 /* Da-Movie-QuizzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE1F38501BA7255E00601B81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = CostardRouge;
+				TargetAttributes = {
+					FE1F38571BA7255E00601B81 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					FE1F386E1BA7255E00601B81 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = FE1F38571BA7255E00601B81;
+					};
+				};
+			};
+			buildConfigurationList = FE1F38531BA7255E00601B81 /* Build configuration list for PBXProject "Da-Movie-Quizz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE1F384F1BA7255E00601B81;
+			productRefGroup = FE1F38591BA7255E00601B81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE1F38571BA7255E00601B81 /* Da-Movie-Quizz */,
+				FE1F386E1BA7255E00601B81 /* Da-Movie-QuizzTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE1F38561BA7255E00601B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1F38651BA7255E00601B81 /* Main.storyboard in Resources */,
+				FE1F386A1BA7255E00601B81 /* LaunchScreen.xib in Resources */,
+				FE1F38671BA7255E00601B81 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE1F386D1BA7255E00601B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE1F38541BA7255E00601B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1F38621BA7255E00601B81 /* SecondViewController.swift in Sources */,
+				FE1F385E1BA7255E00601B81 /* AppDelegate.swift in Sources */,
+				FE1F38601BA7255E00601B81 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE1F386B1BA7255E00601B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1F38761BA7255E00601B81 /* Da_Movie_QuizzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE1F38711BA7255E00601B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE1F38571BA7255E00601B81 /* Da-Movie-Quizz */;
+			targetProxy = FE1F38701BA7255E00601B81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE1F38631BA7255E00601B81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE1F38641BA7255E00601B81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE1F38681BA7255E00601B81 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE1F38691BA7255E00601B81 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE1F38771BA7255E00601B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE1F38781BA7255E00601B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE1F387A1BA7255E00601B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Da-Movie-Quizz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE1F387B1BA7255E00601B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Da-Movie-Quizz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FE1F387D1BA7255E00601B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Da-Movie-QuizzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Da-Movie-Quizz.app/Da-Movie-Quizz";
+			};
+			name = Debug;
+		};
+		FE1F387E1BA7255E00601B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Da-Movie-QuizzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Da-Movie-Quizz.app/Da-Movie-Quizz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE1F38531BA7255E00601B81 /* Build configuration list for PBXProject "Da-Movie-Quizz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE1F38771BA7255E00601B81 /* Debug */,
+				FE1F38781BA7255E00601B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE1F38791BA7255E00601B81 /* Build configuration list for PBXNativeTarget "Da-Movie-Quizz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE1F387A1BA7255E00601B81 /* Debug */,
+				FE1F387B1BA7255E00601B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE1F387C1BA7255E00601B81 /* Build configuration list for PBXNativeTarget "Da-Movie-QuizzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE1F387D1BA7255E00601B81 /* Debug */,
+				FE1F387E1BA7255E00601B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE1F38501BA7255E00601B81 /* Project object */;
+}
