@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SettingsViewController.swift
 //  Da-Movie-Quizz
 //
 //  Created by Steeve Pommier on 14/09/15.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        println("SettingsViewController viewDidLoad")
     }
 
     override func didReceiveMemoryWarning() {

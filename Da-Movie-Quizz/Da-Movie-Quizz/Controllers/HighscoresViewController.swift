@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  HighscoresViewController.swift
 //  Da-Movie-Quizz
 //
 //  Created by Steeve Pommier on 14/09/15.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class HighscoresViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        println("HighscoresViewController viewDidLoad")
     }
 
     override func didReceiveMemoryWarning() {
