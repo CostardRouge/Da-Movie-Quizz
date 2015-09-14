@@ -40,6 +40,11 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>Globals</key>
+	<dict>
+		<key>IMBD_DEFAULT_API_KEY</key>
+		<string>7ea5f490261a949e52930517e1b4657c</string>
+	</dict>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
