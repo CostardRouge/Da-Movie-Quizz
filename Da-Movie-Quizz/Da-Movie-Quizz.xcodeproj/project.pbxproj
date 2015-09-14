@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		FE1F385E1BA7255E00601B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F385D1BA7255E00601B81 /* AppDelegate.swift */; };
-		FE1F38601BA7255E00601B81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F385F1BA7255E00601B81 /* FirstViewController.swift */; };
-		FE1F38621BA7255E00601B81 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38611BA7255E00601B81 /* SecondViewController.swift */; };
 		FE1F38651BA7255E00601B81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38631BA7255E00601B81 /* Main.storyboard */; };
 		FE1F38671BA7255E00601B81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38661BA7255E00601B81 /* Images.xcassets */; };
 		FE1F386A1BA7255E00601B81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38681BA7255E00601B81 /* LaunchScreen.xib */; };
 		FE1F38761BA7255E00601B81 /* Da_Movie_QuizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38751BA7255E00601B81 /* Da_Movie_QuizzTests.swift */; };
+		FE1F38B71BA74D6600601B81 /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B21BA74D6600601B81 /* HighscoresViewController.swift */; };
+		FE1F38B81BA74D6600601B81 /* QuizzFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B31BA74D6600601B81 /* QuizzFinishedViewController.swift */; };
+		FE1F38B91BA74D6600601B81 /* QuizzSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B41BA74D6600601B81 /* QuizzSceneViewController.swift */; };
+		FE1F38BA1BA74D6600601B81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */; };
+		FE1F38BB1BA74D6600601B81 /* StartQuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B61BA74D6600601B81 /* StartQuizzViewController.swift */; };
+		FEF9D69E1BA75B4000837037 /* QuizzGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D69D1BA75B4000837037 /* QuizzGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +34,18 @@
 		FE1F38581BA7255E00601B81 /* Da-Movie-Quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Da-Movie-Quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1F385C1BA7255E00601B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1F385D1BA7255E00601B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE1F385F1BA7255E00601B81 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		FE1F38611BA7255E00601B81 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		FE1F38641BA7255E00601B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE1F38661BA7255E00601B81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE1F38691BA7255E00601B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FE1F386F1BA7255E00601B81 /* Da-Movie-QuizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Da-Movie-QuizzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1F38741BA7255E00601B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1F38751BA7255E00601B81 /* Da_Movie_QuizzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Da_Movie_QuizzTests.swift; sourceTree = "<group>"; };
+		FE1F38B21BA74D6600601B81 /* HighscoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighscoresViewController.swift; path = Controllers/HighscoresViewController.swift; sourceTree = "<group>"; };
+		FE1F38B31BA74D6600601B81 /* QuizzFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzFinishedViewController.swift; path = Controllers/QuizzFinishedViewController.swift; sourceTree = "<group>"; };
+		FE1F38B41BA74D6600601B81 /* QuizzSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzSceneViewController.swift; path = Controllers/QuizzSceneViewController.swift; sourceTree = "<group>"; };
+		FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
+		FE1F38B61BA74D6600601B81 /* StartQuizzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartQuizzViewController.swift; path = Controllers/StartQuizzViewController.swift; sourceTree = "<group>"; };
+		FEF9D69D1BA75B4000837037 /* QuizzGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzGame.swift; path = Models/QuizzGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,10 @@
 		FE1F385A1BA7255E00601B81 /* Da-Movie-Quizz */ = {
 			isa = PBXGroup;
 			children = (
+				FE1F38AF1BA743C500601B81 /* Controllers */,
+				FE1F38AE1BA743B900601B81 /* Models */,
+				FE1F38AD1BA743AF00601B81 /* Helpers */,
 				FE1F385D1BA7255E00601B81 /* AppDelegate.swift */,
-				FE1F385F1BA7255E00601B81 /* FirstViewController.swift */,
-				FE1F38611BA7255E00601B81 /* SecondViewController.swift */,
 				FE1F38631BA7255E00601B81 /* Main.storyboard */,
 				FE1F38661BA7255E00601B81 /* Images.xcassets */,
 				FE1F38681BA7255E00601B81 /* LaunchScreen.xib */,
@@ -113,6 +122,33 @@
 				FE1F38741BA7255E00601B81 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE1F38AD1BA743AF00601B81 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		FE1F38AE1BA743B900601B81 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEF9D69D1BA75B4000837037 /* QuizzGame.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FE1F38AF1BA743C500601B81 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F38B21BA74D6600601B81 /* HighscoresViewController.swift */,
+				FE1F38B31BA74D6600601B81 /* QuizzFinishedViewController.swift */,
+				FE1F38B41BA74D6600601B81 /* QuizzSceneViewController.swift */,
+				FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */,
+				FE1F38B61BA74D6600601B81 /* StartQuizzViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1F38621BA7255E00601B81 /* SecondViewController.swift in Sources */,
+				FE1F38B81BA74D6600601B81 /* QuizzFinishedViewController.swift in Sources */,
+				FE1F38BB1BA74D6600601B81 /* StartQuizzViewController.swift in Sources */,
+				FE1F38B91BA74D6600601B81 /* QuizzSceneViewController.swift in Sources */,
 				FE1F385E1BA7255E00601B81 /* AppDelegate.swift in Sources */,
-				FE1F38601BA7255E00601B81 /* FirstViewController.swift in Sources */,
+				FEF9D69E1BA75B4000837037 /* QuizzGame.swift in Sources */,
+				FE1F38BA1BA74D6600601B81 /* SettingsViewController.swift in Sources */,
+				FE1F38B71BA74D6600601B81 /* HighscoresViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +453,7 @@
 				FE1F387B1BA7255E00601B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE1F387C1BA7255E00601B81 /* Build configuration list for PBXNativeTarget "Da-Movie-QuizzTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +462,7 @@
 				FE1F387E1BA7255E00601B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
