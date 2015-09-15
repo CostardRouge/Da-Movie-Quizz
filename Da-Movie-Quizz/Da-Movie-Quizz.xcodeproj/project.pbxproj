@@ -13,11 +13,11 @@
 		FE1F386A1BA7255E00601B81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38681BA7255E00601B81 /* LaunchScreen.xib */; };
 		FE1F38761BA7255E00601B81 /* Da_Movie_QuizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38751BA7255E00601B81 /* Da_Movie_QuizzTests.swift */; };
 		FE1F38B71BA74D6600601B81 /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B21BA74D6600601B81 /* HighscoresViewController.swift */; };
-		FE1F38B81BA74D6600601B81 /* QuizzFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B31BA74D6600601B81 /* QuizzFinishedViewController.swift */; };
-		FE1F38B91BA74D6600601B81 /* QuizzSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B41BA74D6600601B81 /* QuizzSceneViewController.swift */; };
+		FE1F38B81BA74D6600601B81 /* QuizzEndedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B31BA74D6600601B81 /* QuizzEndedViewController.swift */; };
+		FE1F38B91BA74D6600601B81 /* QuizzSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B41BA74D6600601B81 /* QuizzSettingsViewController.swift */; };
 		FE1F38BA1BA74D6600601B81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */; };
-		FE1F38BB1BA74D6600601B81 /* StartQuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B61BA74D6600601B81 /* StartQuizzViewController.swift */; };
 		FEF9D69E1BA75B4000837037 /* QuizzGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D69D1BA75B4000837037 /* QuizzGame.swift */; };
+		FEF9D7021BA79CE100837037 /* QuizzStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D7011BA79CE100837037 /* QuizzStartedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +41,11 @@
 		FE1F38741BA7255E00601B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1F38751BA7255E00601B81 /* Da_Movie_QuizzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Da_Movie_QuizzTests.swift; sourceTree = "<group>"; };
 		FE1F38B21BA74D6600601B81 /* HighscoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighscoresViewController.swift; path = Controllers/HighscoresViewController.swift; sourceTree = "<group>"; };
-		FE1F38B31BA74D6600601B81 /* QuizzFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzFinishedViewController.swift; path = Controllers/QuizzFinishedViewController.swift; sourceTree = "<group>"; };
-		FE1F38B41BA74D6600601B81 /* QuizzSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzSceneViewController.swift; path = Controllers/QuizzSceneViewController.swift; sourceTree = "<group>"; };
+		FE1F38B31BA74D6600601B81 /* QuizzEndedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzEndedViewController.swift; path = Controllers/QuizzEndedViewController.swift; sourceTree = "<group>"; };
+		FE1F38B41BA74D6600601B81 /* QuizzSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzSettingsViewController.swift; path = Controllers/QuizzSettingsViewController.swift; sourceTree = "<group>"; };
 		FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
-		FE1F38B61BA74D6600601B81 /* StartQuizzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartQuizzViewController.swift; path = Controllers/StartQuizzViewController.swift; sourceTree = "<group>"; };
 		FEF9D69D1BA75B4000837037 /* QuizzGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzGame.swift; path = Models/QuizzGame.swift; sourceTree = "<group>"; };
+		FEF9D7011BA79CE100837037 /* QuizzStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzStartedViewController.swift; path = Controllers/QuizzStartedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,11 +142,11 @@
 		FE1F38AF1BA743C500601B81 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FE1F38B41BA74D6600601B81 /* QuizzSettingsViewController.swift */,
+				FEF9D7011BA79CE100837037 /* QuizzStartedViewController.swift */,
+				FE1F38B31BA74D6600601B81 /* QuizzEndedViewController.swift */,
 				FE1F38B21BA74D6600601B81 /* HighscoresViewController.swift */,
-				FE1F38B31BA74D6600601B81 /* QuizzFinishedViewController.swift */,
-				FE1F38B41BA74D6600601B81 /* QuizzSceneViewController.swift */,
 				FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */,
-				FE1F38B61BA74D6600601B81 /* StartQuizzViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -251,9 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1F38B81BA74D6600601B81 /* QuizzFinishedViewController.swift in Sources */,
-				FE1F38BB1BA74D6600601B81 /* StartQuizzViewController.swift in Sources */,
-				FE1F38B91BA74D6600601B81 /* QuizzSceneViewController.swift in Sources */,
+				FEF9D7021BA79CE100837037 /* QuizzStartedViewController.swift in Sources */,
+				FE1F38B81BA74D6600601B81 /* QuizzEndedViewController.swift in Sources */,
+				FE1F38B91BA74D6600601B81 /* QuizzSettingsViewController.swift in Sources */,
 				FE1F385E1BA7255E00601B81 /* AppDelegate.swift in Sources */,
 				FEF9D69E1BA75B4000837037 /* QuizzGame.swift in Sources */,
 				FE1F38BA1BA74D6600601B81 /* SettingsViewController.swift in Sources */,

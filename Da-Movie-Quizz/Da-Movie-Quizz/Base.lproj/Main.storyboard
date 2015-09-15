@@ -7,7 +7,6 @@
         <!--Quizz-->
         <scene sceneID="MXU-c5-VYy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yKx-qo-pn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="TMh-fT-roV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Quizz" id="nZa-ZO-2hv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c9Z-3g-Tq9">
@@ -18,13 +17,14 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="4cN-iq-9FX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKx-qo-pn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="429" y="-251"/>
         </scene>
         <!--Quizz settings-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="StartQuizzViewController" customModule="Da_Movie_Quizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="QuizzSettingsViewController" customModule="Da_Movie_Quizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="70g-CV-2IL" kind="push" id="k3r-yW-VEf"/>
+                                    <segue destination="70g-CV-2IL" kind="push" identifier="startQuizz" id="wEw-r8-zVP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors gender filter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9c6-yA-Lf8">
@@ -117,7 +117,7 @@
         <!--GameStarted-->
         <scene sceneID="lvQ-ZB-7Tf">
             <objects>
-                <viewController title="Quizz in progress" id="70g-CV-2IL" userLabel="GameStarted" sceneMemberID="viewController">
+                <viewController title="Quizz in progress" id="70g-CV-2IL" userLabel="GameStarted" customClass="QuizzStartedViewController" customModule="Da_Movie_Quizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pyF-iE-kSM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,6 +195,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="trueAnswerButtonTouchedDown:" destination="70g-CV-2IL" eventType="touchUpInside" id="JbI-fX-OQV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fr7-Dr-yWF">
                                 <rect key="frame" x="174" y="431" width="130" height="30"/>
@@ -204,6 +207,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="falseAnswerButtonTouchedDown:" destination="70g-CV-2IL" eventType="touchUpInside" id="N9e-tI-9iH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00min. 33sec." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NLc-qi-60O">
                                 <rect key="frame" x="50" y="132" width="220" height="25"/>
@@ -223,6 +229,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="skipButtonTouchedDown:" destination="70g-CV-2IL" eventType="touchUpInside" id="hfR-eO-hcF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,6 +239,11 @@
                     <navigationItem key="navigationItem" id="fF5-vj-Utc"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="roundCountLabel" destination="6HV-oa-mSn" id="t7h-jd-l05"/>
+                        <outlet property="scoreCountLabel" destination="Wks-Pe-w7y" id="Zlc-QG-Thi"/>
+                        <outlet property="timeValueLabel" destination="NLc-qi-60O" id="xfi-Hv-nVi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjT-vz-9ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +252,7 @@
         <!--GameEnded-->
         <scene sceneID="SmH-IM-HeL">
             <objects>
-                <viewController title="Quizz in progress" id="uyT-UY-1K3" userLabel="GameEnded" sceneMemberID="viewController">
+                <viewController title="Quizz in progress" id="uyT-UY-1K3" userLabel="GameEnded" customClass="QuizzEndedViewController" customModule="Da_Movie_Quizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="woH-lV-zog">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,6 +421,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-32" y="535.81333333333328"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9JY-La-XRX">
+            <objects>
+                <viewController id="QcO-jF-BGj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l9e-i3-qBC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baH-bM-TyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
