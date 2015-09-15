@@ -10,6 +10,8 @@ import UIKit
 
 class QuizzSettingsViewController: UIViewController {
 
+    @IBOutlet weak var limitedTimeSwitchButton: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,6 +34,14 @@ class QuizzSettingsViewController: UIViewController {
             
             game.roundCount = 1;
             game.scoreCount = 0;
+            
+            if (self.limitedTimeSwitchButton.on) {
+                game.timeMode = .Limited
+            }
+            else {
+                game.timeMode = .Unlimited
+            }
+            
             
             (segue.destinationViewController as! QuizzStartedViewController).gameItem = game
         }

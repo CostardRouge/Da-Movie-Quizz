@@ -109,6 +109,9 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Quizz settings" id="sBC-ws-jU8"/>
+                    <connections>
+                        <outlet property="limitedTimeSwitchButton" destination="DTK-76-wS0" id="Awb-cg-DkK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
