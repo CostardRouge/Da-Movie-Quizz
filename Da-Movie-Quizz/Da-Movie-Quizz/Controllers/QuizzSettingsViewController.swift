@@ -17,20 +17,6 @@ class QuizzSettingsViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         println("QuizzSettingsViewController viewDidLoad")
-        
-        
-        if let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist") {
-            if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject> {
-                // use swift dictionary as normal
-                
-                if let globals = dict["Globals"] {
-                    if let imbd_default_api_key = globals["IMBD_DEFAULT_API_KEY"] {
-                        println("imbd_default_api_key", imbd_default_api_key)
-                    }
-                }
-                
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {

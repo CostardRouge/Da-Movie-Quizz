@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D31CDD1A26A9B4B7EC1BF5C /* Pods_Da_Movie_Quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7658EDE2145169DF677F7 /* Pods_Da_Movie_Quizz.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FE1F24A11BA842F1002B5805 /* ILMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1F24A01BA842F1002B5805 /* ILMovieDB.framework */; };
+		FE1F24A31BA84CB6002B5805 /* QuizzGameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F24A21BA84CB6002B5805 /* QuizzGameHelper.swift */; };
 		FE1F385E1BA7255E00601B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F385D1BA7255E00601B81 /* AppDelegate.swift */; };
 		FE1F38651BA7255E00601B81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38631BA7255E00601B81 /* Main.storyboard */; };
 		FE1F38671BA7255E00601B81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38661BA7255E00601B81 /* Images.xcassets */; };
@@ -38,6 +39,7 @@
 		65E7658EDE2145169DF677F7 /* Pods_Da_Movie_Quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Da_Movie_Quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E53682526BB25373EB33116 /* Pods-Da-Movie-Quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Da-Movie-Quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Da-Movie-Quizz/Pods-Da-Movie-Quizz.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1F24A01BA842F1002B5805 /* ILMovieDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ILMovieDB.framework; path = "Pods/../build/Debug-iphoneos/ILMovieDB.framework"; sourceTree = "<group>"; };
+		FE1F24A21BA84CB6002B5805 /* QuizzGameHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzGameHelper.swift; path = Helpers/QuizzGameHelper.swift; sourceTree = "<group>"; };
 		FE1F38581BA7255E00601B81 /* Da-Movie-Quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Da-Movie-Quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1F385C1BA7255E00601B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1F385D1BA7255E00601B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		FE1F38AD1BA743AF00601B81 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FE1F24A21BA84CB6002B5805 /* QuizzGameHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				FEF9D69E1BA75B4000837037 /* QuizzGame.swift in Sources */,
 				FE1F38BA1BA74D6600601B81 /* SettingsViewController.swift in Sources */,
 				FE1F38B71BA74D6600601B81 /* HighscoresViewController.swift in Sources */,
+				FE1F24A31BA84CB6002B5805 /* QuizzGameHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

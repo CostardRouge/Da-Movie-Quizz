@@ -14,11 +14,15 @@ class QuizzStartedViewController: UIViewController {
     var count = 0
     var seconds = 0
     var timer = NSTimer()
+    
+    var gameItem: QuizzGame?
+    var imbdClient: ILMovieDBClient?
 
     @IBOutlet weak var scoreCountLabel: UILabel!
     @IBOutlet weak var roundCountLabel: UILabel!
     @IBOutlet weak var timeValueLabel: UILabel!
     
+    // GUI : Button actions
     @IBAction func trueAnswerButtonTouchedDown(sender: AnyObject) {
         println("trueAnswerButtonTouchedDown")
         
@@ -40,8 +44,7 @@ class QuizzStartedViewController: UIViewController {
         self.updateScoreCountLabelText(self.gameItem!.scoreCount)
     }
     
-    var gameItem: QuizzGame?
-    
+    // GUI : Label handlers
     func getRoundCountLabelText(roundCount: Int) -> String {
         return String(format: "#%d", roundCount)
     }
@@ -62,20 +65,70 @@ class QuizzStartedViewController: UIViewController {
         }
     }
     
+    func getPopularMoviesList(pageValue: Int) -> NSArray // ok that is stupid
+    {
+        var paramaters = ["page": pageValue]
+        var popularMoviesList = NSArray()
+        
+        //println(ILMovieDB.kILMovieDBMoviePopular)
+        
+        self.imbdClient?.GET(ILMovieDB.kILMovieDBMoviePopular, parameters: paramaters, block: { (responseObject, error) -> Void in
+            if (error != nil) {
+                println("error")
+            }
+            println("kILMovieDBMoviePopular")
+            //println(responseObject)
+            
+            if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
+                //println(jsonResult)
+                
+                //var results = jsonResult.indexForKey("results");
+                //println(results)
+                
+                if let results = jsonResult["results"] as? NSArray {
+                    //return results
+                    //print(results)
+                    popularMoviesList = results
+                }
+            }
+         })
+        return popularMoviesList
+    }
+    
+    func loadQuizzQuestion() {
+        
+        let popularMoviesList = self.getPopularMoviesList(1)
+        print(popularMoviesList.count)
+        
+        
+//        extern NSString * const kILMovieDBMovieLatest;
+//        extern NSString * const kILMovieDBMovieUpcoming;
+//        extern NSString * const kILMovieDBMovieTheatres;
+//        extern NSString * const kILMovieDBMoviePopular;
+//        extern NSString * const kILMovieDBMovieTopRated;
+        
+        
+    }
+    
     func setupGame()  {
         
         if let game: QuizzGame = self.gameItem {
             
-            //var t = JLTMDbClient()
+            // Retrieve imbd api key form our app globals
+            let appGlobals = QuizzGameHelper.getAppGlobalsDictionary()
             
-            //NSBundle(forClass: JLTMDbClient)
-            
-            
-            
-            
-            
-            
-            
+            // If a default imbd api key is defined, we can started the game
+            if let imbd_default_api_key: AnyObject = appGlobals["IMBD_DEFAULT_API_KEY"] {
+                println("imbd_default_api_key", imbd_default_api_key)
+                
+                self.imbdClient = ILMovieDBClient.sharedClient()
+                self.imbdClient?.apiKey = imbd_default_api_key as! String
+                
+                self.loadQuizzQuestion()
+            }
+            else {
+                println("NO API KEY DEFINED!")
+            }
             
             if (game.timeMode == .Limited) {
                 seconds = 5
