@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9381378BDAB5D1779BD7C20F /* libPods-Da-Movie-Quizz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A729D51633C59DBC1F4C283 /* libPods-Da-Movie-Quizz.a */; };
+		2D31CDD1A26A9B4B7EC1BF5C /* Pods_Da_Movie_Quizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7658EDE2145169DF677F7 /* Pods_Da_Movie_Quizz.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FE1F24A11BA842F1002B5805 /* ILMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1F24A01BA842F1002B5805 /* ILMovieDB.framework */; };
 		FE1F385E1BA7255E00601B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F385D1BA7255E00601B81 /* AppDelegate.swift */; };
 		FE1F38651BA7255E00601B81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38631BA7255E00601B81 /* Main.storyboard */; };
 		FE1F38671BA7255E00601B81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1F38661BA7255E00601B81 /* Images.xcassets */; };
@@ -19,6 +20,7 @@
 		FE1F38BA1BA74D6600601B81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */; };
 		FEF9D69E1BA75B4000837037 /* QuizzGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D69D1BA75B4000837037 /* QuizzGame.swift */; };
 		FEF9D7021BA79CE100837037 /* QuizzStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D7011BA79CE100837037 /* QuizzStartedViewController.swift */; };
+		FEF9D7371BA83A4400837037 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF9D7361BA83A4400837037 /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +35,9 @@
 
 /* Begin PBXFileReference section */
 		3F6B0FAB562C049028CC037E /* Pods-Da-Movie-Quizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Da-Movie-Quizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Da-Movie-Quizz/Pods-Da-Movie-Quizz.release.xcconfig"; sourceTree = "<group>"; };
-		8A729D51633C59DBC1F4C283 /* libPods-Da-Movie-Quizz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Da-Movie-Quizz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E7658EDE2145169DF677F7 /* Pods_Da_Movie_Quizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Da_Movie_Quizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E53682526BB25373EB33116 /* Pods-Da-Movie-Quizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Da-Movie-Quizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Da-Movie-Quizz/Pods-Da-Movie-Quizz.debug.xcconfig"; sourceTree = "<group>"; };
+		FE1F24A01BA842F1002B5805 /* ILMovieDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ILMovieDB.framework; path = "Pods/../build/Debug-iphoneos/ILMovieDB.framework"; sourceTree = "<group>"; };
 		FE1F38581BA7255E00601B81 /* Da-Movie-Quizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Da-Movie-Quizz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1F385C1BA7255E00601B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1F385D1BA7255E00601B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +53,9 @@
 		FE1F38B51BA74D6600601B81 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
 		FEF9D69D1BA75B4000837037 /* QuizzGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzGame.swift; path = Models/QuizzGame.swift; sourceTree = "<group>"; };
 		FEF9D7011BA79CE100837037 /* QuizzStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizzStartedViewController.swift; path = Controllers/QuizzStartedViewController.swift; sourceTree = "<group>"; };
+		FEF9D7311BA7C4F600837037 /* libJLTMDbClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJLTMDbClient.a; path = "Pods/../build/Debug-iphoneos/libJLTMDbClient.a"; sourceTree = "<group>"; };
+		FEF9D7361BA83A4400837037 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		FEF9D7381BA83A4C00837037 /* JLTMDbClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JLTMDbClient.framework; path = "Pods/../build/Debug-iphoneos/JLTMDbClient.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9381378BDAB5D1779BD7C20F /* libPods-Da-Movie-Quizz.a in Frameworks */,
+				FE1F24A11BA842F1002B5805 /* ILMovieDB.framework in Frameworks */,
+				FEF9D7371BA83A4400837037 /* AFNetworking.framework in Frameworks */,
+				2D31CDD1A26A9B4B7EC1BF5C /* Pods_Da_Movie_Quizz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +82,11 @@
 		9271D75EF5805517A445C8DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A729D51633C59DBC1F4C283 /* libPods-Da-Movie-Quizz.a */,
+				FE1F24A01BA842F1002B5805 /* ILMovieDB.framework */,
+				FEF9D7381BA83A4C00837037 /* JLTMDbClient.framework */,
+				FEF9D7361BA83A4400837037 /* AFNetworking.framework */,
+				FEF9D7311BA7C4F600837037 /* libJLTMDbClient.a */,
+				65E7658EDE2145169DF677F7 /* Pods_Da_Movie_Quizz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,6 +199,7 @@
 				FE1F38551BA7255E00601B81 /* Frameworks */,
 				FE1F38561BA7255E00601B81 /* Resources */,
 				986AE06AC9321205462AC775 /* Copy Pods Resources */,
+				1735CBDD521F00BF037D1292 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +286,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1735CBDD521F00BF037D1292 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Da-Movie-Quizz/Pods-Da-Movie-Quizz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6A16BE9309D9602C165C2230 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +426,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -435,6 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -444,9 +474,19 @@
 			baseConfigurationReference = 8E53682526BB25373EB33116 /* Pods-Da-Movie-Quizz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Da-Movie-Quizz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 			};
 			name = Debug;
 		};
@@ -455,9 +495,19 @@
 			baseConfigurationReference = 3F6B0FAB562C049028CC037E /* Pods-Da-Movie-Quizz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Da-Movie-Quizz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 			};
 			name = Release;
 		};

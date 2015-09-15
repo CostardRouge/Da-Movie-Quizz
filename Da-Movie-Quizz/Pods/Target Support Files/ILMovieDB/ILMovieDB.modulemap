@@ -1,0 +1,6 @@
+framework module ILMovieDB {
+  umbrella header "ILMovieDB-umbrella.h"
+
+  export *
+  module * { export * }
+}

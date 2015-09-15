@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ILMovieDB
 
 class QuizzStartedViewController: UIViewController {
     
@@ -20,7 +21,6 @@ class QuizzStartedViewController: UIViewController {
     
     @IBAction func trueAnswerButtonTouchedDown(sender: AnyObject) {
         println("trueAnswerButtonTouchedDown")
-        
         
         self.updateRoundCountLabelText(self.gameItem!.roundCount++)
     }
@@ -65,6 +65,18 @@ class QuizzStartedViewController: UIViewController {
     func setupGame()  {
         
         if let game: QuizzGame = self.gameItem {
+            
+            //var t = JLTMDbClient()
+            
+            //NSBundle(forClass: JLTMDbClient)
+            
+            
+            
+            
+            
+            
+            
+            
             if (game.timeMode == .Limited) {
                 seconds = 5
             }

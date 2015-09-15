@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JLTMDbClient.xcscheme</key>
+		<key>ILMovieDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -21,6 +21,22 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>1B871F06BE3EF6C9B7BBEE50FC828074</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>841719454D330D64D714083C61998695</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>84727C2115AB4D598554CF17B6546970</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
