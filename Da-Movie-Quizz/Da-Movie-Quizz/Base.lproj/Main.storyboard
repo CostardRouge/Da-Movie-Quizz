@@ -89,7 +89,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="70g-CV-2IL" kind="push" identifier="startQuizz" id="wEw-r8-zVP"/>
+                                    <action selector="startGameButtonTouchedDown:" destination="9pv-A4-QxB" eventType="touchUpInside" id="N36-lR-WTx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors gender filter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9c6-yA-Lf8">
@@ -111,6 +111,8 @@
                     <navigationItem key="navigationItem" title="Quizz settings" id="sBC-ws-jU8"/>
                     <connections>
                         <outlet property="limitedTimeSwitchButton" destination="DTK-76-wS0" id="Awb-cg-DkK"/>
+                        <outlet property="startGameButton" destination="s8L-Pz-Fig" id="IWC-5O-4W6"/>
+                        <segue destination="70g-CV-2IL" kind="push" identifier="startQuizz" id="Ufd-Kj-u1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
