@@ -1,0 +1,12 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'Da-Movie-Quizz' do
+ pod 'AFNetworking', '~> 2.5'
+ pod 'JLTMDbClient', '~> 0.3.0'
+end
+
+target 'Da-Movie-QuizzTests' do
+
+end
+

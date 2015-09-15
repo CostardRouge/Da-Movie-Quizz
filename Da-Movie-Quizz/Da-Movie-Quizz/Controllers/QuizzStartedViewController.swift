@@ -66,7 +66,7 @@ class QuizzStartedViewController: UIViewController {
         
         if let game: QuizzGame = self.gameItem {
             if (game.timeMode == .Limited) {
-                seconds = 30
+                seconds = 5
             }
             else {
                 seconds = 0
@@ -89,6 +89,7 @@ class QuizzStartedViewController: UIViewController {
                 seconds--
                 
                 if(seconds == 0)  {
+                    timer.invalidate()
                     println("Game over")
                 }
             }

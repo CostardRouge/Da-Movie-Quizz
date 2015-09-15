@@ -366,7 +366,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Highscores" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Highscores" image="first" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -398,7 +398,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="gID-kY-uFg"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Settings" image="second" id="gID-kY-uFg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsm-oB-r0o" sceneMemberID="firstResponder"/>
             </objects>
@@ -424,19 +424,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-32" y="535.81333333333328"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9JY-La-XRX">
-            <objects>
-                <viewController id="QcO-jF-BGj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="l9e-i3-qBC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="baH-bM-TyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
