@@ -31,11 +31,7 @@ class QuizzSettingsViewController: UIViewController {
         }
     }
     
-    var actorCredits = NSMutableDictionary()  {
-        didSet {
-            launchGame()
-        }
-    }
+    var actorCredits = NSMutableDictionary()
 
     @IBOutlet weak var limitedTimeSwitchButton: UISwitch!
     @IBOutlet weak var startGameButton: UIButton!
@@ -102,7 +98,6 @@ class QuizzSettingsViewController: UIViewController {
         if (self.moviesList.count > 0 && self.actorsList.count > 0) {
             
             // all credits downloaded
-            if (self.actorCredits.count == 20) {
                 // now we can laucnh a game
                 if (startGameButton.enabled == false) {
                     performSegueWithIdentifier("startQuizz", sender: self)
@@ -111,7 +106,6 @@ class QuizzSettingsViewController: UIViewController {
                 // Re validate start game button
                 startGameButton.enabled = true
                 startGameButton.setTitle("Start", forState: .Normal)
-            }
         }
         else
         {

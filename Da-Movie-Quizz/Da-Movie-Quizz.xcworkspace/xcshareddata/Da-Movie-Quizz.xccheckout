@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C7F1D0D1-70B4-419B-A4D1-94A64CF749FD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Da-Movie-Quizz</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B4DA1DCBF6EB68B39C022C114DD7B3051EC97F3B</key>
+		<string>https://github.com/CostardRouge/Da-Movie-Quizz.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Da-Movie-Quizz/Da-Movie-Quizz.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B4DA1DCBF6EB68B39C022C114DD7B3051EC97F3B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CostardRouge/Da-Movie-Quizz.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B4DA1DCBF6EB68B39C022C114DD7B3051EC97F3B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4DA1DCBF6EB68B39C022C114DD7B3051EC97F3B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Da-Movie-Quizz</string>
+		</dict>
+	</array>
+</dict>
+</plist>
