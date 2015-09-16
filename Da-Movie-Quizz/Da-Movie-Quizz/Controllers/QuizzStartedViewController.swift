@@ -18,6 +18,8 @@ class QuizzStartedViewController: UIViewController {
     var moviesList = NSArray()
     var actorsList = NSArray()
     var actorCredits = NSMutableDictionary()
+    var movieCredits = NSMutableDictionary()
+    var headsOrTailsCoin = Bool(false)
     var imbdImagesBaseUrlString = String()
 
     @IBOutlet weak var scoreCountLabel: UILabel!
@@ -90,29 +92,15 @@ class QuizzStartedViewController: UIViewController {
     }
     
     func loadQuizzQuestion() {
-        // Get random actor
-        let actorsListCount = self.actorsList.count
-        let actor: AnyObject = self.actorsList.objectAtIndex(Int(arc4random_uniform(UInt32(actorsListCount))))
-        let actor_id = actor["id"] as! Int;
-        let actor_name = actor["name"] as! String;
-        let actor_profile_path = actor["profile_path"] as! String;
-        
-        // Set actor image
-        let actorProfileUrlString = self.imbdImagesBaseUrlString.stringByAppendingString(actor_profile_path)
-        
-        if let url = NSURL(string: actorProfileUrlString) {
-            if let data = NSData(contentsOfURL: url){
-                self.actorImageView.contentMode = UIViewContentMode.ScaleAspectFit
-                self.actorImageView.image = UIImage(data: data)
-            }
-        }
-        
         // Get random movie entry
         let moviesListCount = self.moviesList.count
         let movie: AnyObject = self.moviesList.objectAtIndex(Int(arc4random_uniform(UInt32(moviesListCount))))
         let movie_id = movie["id"] as! Int;
         let movie_original_title = movie["original_title"] as! String;
         let movie_poster_path = movie["poster_path"] as! String;
+        
+        //
+        println(movie_original_title)
         
         // Set movie image
         let moviePosterUrlString = self.imbdImagesBaseUrlString.stringByAppendingString(movie_poster_path)
@@ -124,7 +112,25 @@ class QuizzStartedViewController: UIViewController {
             }
         }
         
-        // Technique de gros porc, il est bientot 5h du mat...
+        // Get an actor arbitrarily or not
+        let choosenActor:NSDictionary = self.chooseActor(movie_id)
+
+        let actor_id = choosenActor["id"] as! Int
+        let actor_name = choosenActor["name"] as! String
+        
+        if let actor_profile_path = choosenActor["profile_path"] as? String {
+            // Set actor image
+            let actorProfileUrlString = self.imbdImagesBaseUrlString.stringByAppendingString(actor_profile_path)
+            
+            if let url = NSURL(string: actorProfileUrlString) {
+                if let data = NSData(contentsOfURL: url){
+                    self.actorImageView.contentMode = UIViewContentMode.ScaleAspectFit
+                    self.actorImageView.image = UIImage(data: data)
+                }
+            }
+        }
+        
+        // Technique de gros porc, il etait bientot 5h du mat...
         self.actorImageView.tag = actor_id
         self.movieImageView.tag = movie_id
         
@@ -132,8 +138,28 @@ class QuizzStartedViewController: UIViewController {
         self.statementLabel.text = String(format: "'%@' in '%@' ?!", actor_name, movie_original_title)
     }
     
-    func setupGame()  {
+    func chooseActor(imbdMovieId:Int) -> NSDictionary {
+        var choosenActor = NSDictionary()
         
+        // Heads coin = true -> random mechanism
+        if (self.headsOrTailsCoin == true) {
+            let actorsListCount = self.actorsList.count
+            let actor: AnyObject = self.actorsList.objectAtIndex(Int(arc4random_uniform(UInt32(actorsListCount))))
+            choosenActor = actor as! NSDictionary
+        }
+        // Tails coin = false -> logic mechanism
+        else {
+            let movieCredit: NSArray? = self.movieCredits[imbdMovieId] as? NSArray
+            let movieCreditCount = movieCredit!.count
+            let actor: AnyObject = movieCredit!.objectAtIndex(Int(arc4random_uniform(UInt32(movieCreditCount))))
+            choosenActor = actor as! NSDictionary
+        }
+        
+        headsOrTailsCoin = false
+        return choosenActor
+    }
+    
+    func setupGame() {
         if let game: QuizzGame = self.gameItem {
             
             if (game.timeMode == .Limited) {
@@ -214,7 +240,6 @@ class QuizzStartedViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        
         println("QuizzStartedViewController viewDidLoad")
         
         self.configureView()
@@ -224,11 +249,9 @@ class QuizzStartedViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if segue.identifier == "gameOver" {
             // Set game ressources to QuizzEndedViewController (GAME OVER SCREEN)
             (segue.destinationViewController as! QuizzEndedViewController).gameItem = self.gameItem

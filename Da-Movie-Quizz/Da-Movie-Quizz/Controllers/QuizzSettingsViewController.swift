@@ -32,6 +32,7 @@ class QuizzSettingsViewController: UIViewController {
     }
     
     var actorCredits = NSMutableDictionary()
+    var movieCredits = NSMutableDictionary()
 
     @IBOutlet weak var limitedTimeSwitchButton: UISwitch!
     @IBOutlet weak var startGameButton: UIButton!
@@ -87,6 +88,7 @@ class QuizzSettingsViewController: UIViewController {
             
             // Set game ressources to QuizzStartedViewController
             (segue.destinationViewController as! QuizzStartedViewController).imbdImagesBaseUrlString = self.imbdImagesBaseUrlString
+            (segue.destinationViewController as! QuizzStartedViewController).movieCredits = self.movieCredits
             (segue.destinationViewController as! QuizzStartedViewController).actorCredits = self.actorCredits
             (segue.destinationViewController as! QuizzStartedViewController).moviesList = self.moviesList
             (segue.destinationViewController as! QuizzStartedViewController).actorsList = self.actorsList
@@ -146,6 +148,16 @@ class QuizzSettingsViewController: UIViewController {
             }
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
                 if let movies: NSArray? = jsonResult["results"] as? NSArray {
+                    
+                    var stop: Bool
+                    movies?.enumerateObjectsUsingBlock({ (movie, index, stop) -> Void in
+                        //print(movie)
+                        let imbdMovieId = movie["id"] as! Int
+                        self.findAndAddMovieCredits(imbdMovieId)
+                    })
+                    
+                    
+                    
                     self.moviesList = movies!
                 }
             }
@@ -195,7 +207,7 @@ class QuizzSettingsViewController: UIViewController {
     }
     
     func findAndAddActorCredits(imbdActorId: Int) -> Void {
-    
+        
         var actor_credits_api_url = ILMovieDB.kILMovieDBPeopleMovieCredits.stringByReplacingOccurrencesOfString(":id", withString: String(imbdActorId))
         
         self.imbdClient?.GET(actor_credits_api_url, parameters: nil, block: { (responseObject, error) -> Void in
@@ -208,6 +220,25 @@ class QuizzSettingsViewController: UIViewController {
                 if let actor_cast: NSArray? = jsonResult["cast"] as? NSArray {
                     //println(actor_cast)
                     self.actorCredits[imbdActorId] = actor_cast
+                }
+            }
+        })
+    }
+    
+    func findAndAddMovieCredits(imbdMovieId: Int) -> Void {
+        
+        var movie_credits_api_url = ILMovieDB.kILMovieDBMovieCredits.stringByReplacingOccurrencesOfString(":id", withString: String(imbdMovieId))
+        
+        self.imbdClient?.GET(movie_credits_api_url, parameters: nil, block: { (responseObject, error) -> Void in
+            if (error != nil) {
+                println("kILMovieDBMovieCredits error")
+            }
+            
+            if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
+                //println(jsonResult)
+                if let movie_cast: NSArray? = jsonResult["cast"] as? NSArray {
+                    //println(movie_cast)
+                    self.movieCredits[imbdMovieId] = movie_cast
                 }
             }
         })
