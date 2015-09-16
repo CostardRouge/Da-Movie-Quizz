@@ -205,16 +205,13 @@ class QuizzStartedViewController: UIViewController {
         var result = false
         var stop: Bool
         
-        if let movie: NSArray? = self.movieCredits[imbdMovieId] as? NSArray
-        {
+        if let movie: NSArray? = self.movieCredits[imbdMovieId] as? NSArray {
             movie!.enumerateObjectsUsingBlock({ (credit, index, stop) -> Void in
-                
                 let actor_id = credit["id"] as! Int
                 if (imbdActorId == actor_id) {
                     result = true
                 }
             })
-
         }
         return result
     }
@@ -225,9 +222,6 @@ class QuizzStartedViewController: UIViewController {
         if let game: QuizzGame = self.gameItem {
             self.updateScoreCountLabelText(game.scoreCount)
             self.updateRoundCountLabelText(game.roundCount)
-            
-            println(game.roundCount)
-            println(gameItem?.roundCount)
         }
     }
 
@@ -250,6 +244,7 @@ class QuizzStartedViewController: UIViewController {
     
     func popToRoot() {
         navigationController?.popToRootViewControllerAnimated(true)
+        timer.invalidate()
     }
 
     override func didReceiveMemoryWarning() {

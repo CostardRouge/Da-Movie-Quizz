@@ -42,9 +42,6 @@ class QuizzEndedViewController: UIViewController {
         if let game: QuizzGame = self.gameItem {
             updateScoreCountLabelText(game.scoreCount)
             updateRoundCountLabelText(game.roundCount)
-            
-            println(game.roundCount)
-            
             timeValueLabel.text = String(format: "%d sec.", game.timePlayed)
         }
     }
@@ -71,9 +68,6 @@ class QuizzEndedViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
-
-
 }
 
