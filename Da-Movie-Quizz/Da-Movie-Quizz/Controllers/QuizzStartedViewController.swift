@@ -31,11 +31,10 @@ class QuizzStartedViewController: UIViewController {
     
     // GUI : Button actions
     @IBAction func trueAnswerButtonTouchedDown(sender: AnyObject) {
-        self.updateRoundCountLabelText(++self.gameItem!.roundCount)
-        
         if self.hasActorPlayedInMovie(self.actorImageView.tag, imbdMovieId:self.movieImageView.tag) == true {
             self.gameItem!.scoreCount += 10
             self.updateScoreCountLabelText(self.gameItem!.scoreCount)
+            self.updateRoundCountLabelText(++self.gameItem!.roundCount)
             self.loadQuizzQuestion()
         }
         else {
@@ -44,10 +43,9 @@ class QuizzStartedViewController: UIViewController {
     }
     
     @IBAction func falseAnswerButtonTouchedDown(sender: AnyObject) {
-        self.updateRoundCountLabelText(++self.gameItem!.roundCount)
-        
         if self.hasActorPlayedInMovie(self.actorImageView.tag, imbdMovieId:self.movieImageView.tag) == false {
             self.gameItem!.scoreCount += 10
+            self.updateRoundCountLabelText(++self.gameItem!.roundCount)
             self.updateScoreCountLabelText(self.gameItem!.scoreCount)
             self.loadQuizzQuestion()
         }
@@ -245,10 +243,13 @@ class QuizzStartedViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         println("QuizzStartedViewController viewWillAppear")
-        if (timer.valid == false) {
-            // we never know
-            navigationController?.popToRootViewControllerAnimated(false)
-        }
+        
+        var leftButton = UIBarButtonItem(title: "Back to settings", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("popToRoot"))
+        self.navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    func popToRoot() {
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {
