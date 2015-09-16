@@ -10,19 +10,39 @@ import UIKit
 
 class QuizzEndedViewController: UIViewController {
 
-    var gameItem: QuizzGame? {
-        didSet {
-            // Update the view.
-            self.configureView()
+    @IBOutlet weak var scoreValueLabel: UILabel!
+    @IBOutlet weak var roundValueLabel: UILabel!
+    @IBOutlet weak var timeValueLabel: UILabel!
+    
+    var gameItem: QuizzGame?
+    
+    // GUI : Label handlers
+    func getRoundCountLabelText(roundCount: Int) -> String {
+        return String(format: "#%d", roundCount)
+    }
+    
+    func getScoreCountLabelText(scoreCount: Int) -> String {
+        return String(format: "%dpt", scoreCount)
+    }
+    
+    func updateScoreCountLabelText(scoreCount: Int) {
+        if let _scoreCountLabel = self.scoreValueLabel {
+            _scoreCountLabel.text = self.getScoreCountLabelText(scoreCount)
+        }
+    }
+    
+    func updateRoundCountLabelText(roundCount: Int) {
+        if let _roundCountLabel = self.roundValueLabel {
+            _roundCountLabel.text = self.getRoundCountLabelText(roundCount)
         }
     }
     
     func configureView() {
         // Update the user interface for the detail item.
-        if let game: AnyObject = self.gameItem {
-            //if let label = self.detailDescriptionLabel {
-            //    label.text = detail.description
-            //}
+        if let game: QuizzGame = self.gameItem {
+            updateScoreCountLabelText(game.scoreCount)
+            updateRoundCountLabelText(game.roundCount)
+            timeValueLabel.text = String(format: "%d sec.", game.timePlayed)
         }
     }
 
@@ -31,6 +51,7 @@ class QuizzEndedViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         println("QuizzEndedViewController viewDidLoad")
+        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {

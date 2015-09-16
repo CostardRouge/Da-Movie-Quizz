@@ -37,7 +37,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lnr-VV-tbF" userLabel="ActorGenderFilter">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lnr-VV-tbF" userLabel="ActorGenderFilter">
                                 <rect key="frame" x="16" y="183" width="195" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -46,7 +46,7 @@
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies nationality filter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ktg-KU-Mzo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies nationality filter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="Ktg-KU-Mzo">
                                 <rect key="frame" x="16" y="219" width="195" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -56,7 +56,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="AQY-SC-u2A" userLabel="ActorGenderFilter">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="AQY-SC-u2A" userLabel="ActorGenderFilter">
                                 <rect key="frame" x="16" y="242" width="195" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -92,7 +92,7 @@
                                     <action selector="startGameButtonTouchedDown:" destination="9pv-A4-QxB" eventType="touchUpInside" id="N36-lR-WTx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors gender filter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9c6-yA-Lf8">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors gender filter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="9c6-yA-Lf8">
                                 <rect key="frame" x="16" y="160" width="195" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -178,18 +178,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pOj-ZT-O5U" userLabel="ActorIMG">
-                                <rect key="frame" x="16" y="165" width="130" height="220"/>
+                                <rect key="frame" x="16" y="165" width="130" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Actor&quot; in &quot;Movie&quot; ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tfy-mA-2FH">
-                                <rect key="frame" x="16" y="393" width="288" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Actor&quot; in &quot;Movie&quot; ?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tfy-mA-2FH">
+                                <rect key="frame" x="16" y="333" width="288" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W28-t0-tPe" userLabel="MovieIMG">
-                                <rect key="frame" x="174" y="165" width="130" height="220"/>
+                                <rect key="frame" x="174" y="165" width="130" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="548-0M-8aX">
@@ -245,9 +245,13 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="actorImageView" destination="pOj-ZT-O5U" id="sxI-cI-FMt"/>
+                        <outlet property="movieImageView" destination="W28-t0-tPe" id="03U-Gt-8jW"/>
                         <outlet property="roundCountLabel" destination="6HV-oa-mSn" id="t7h-jd-l05"/>
                         <outlet property="scoreCountLabel" destination="Wks-Pe-w7y" id="Zlc-QG-Thi"/>
+                        <outlet property="statementLabel" destination="Tfy-mA-2FH" id="ZJl-Bc-E6W"/>
                         <outlet property="timeValueLabel" destination="NLc-qi-60O" id="xfi-Hv-nVi"/>
+                        <segue destination="uyT-UY-1K3" kind="push" identifier="gameOver" id="CMT-Yn-xi4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjT-vz-9ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,8 +339,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FEC-b4-itd"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="roundValueLabel" destination="PJE-s6-5fm" id="m9r-Yh-ixW"/>
+                        <outlet property="scoreValueLabel" destination="hjx-CZ-h0K" id="XAS-BC-INK"/>
+                        <outlet property="timeValueLabel" destination="RM7-gO-N13" id="8Ev-s2-J2k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqq-1U-spI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

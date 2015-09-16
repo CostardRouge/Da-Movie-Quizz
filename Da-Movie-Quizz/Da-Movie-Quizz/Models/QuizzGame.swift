@@ -24,8 +24,7 @@ class QuizzGame: NSObject {
     
     var roundCount:Int = 0
     var scoreCount:Int = 0
-    
-    var timePlayed:NSDate = NSDate()
+    var timePlayed:Int = 0
     
     var timeMode:eQuizzTimeMode = .Limited
     var actorsGender:eActorsGender = .All

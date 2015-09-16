@@ -13,6 +13,12 @@ class QuizzSettingsViewController: UIViewController {
     
     var imbdClient: ILMovieDBClient?
     
+    var imbdImagesBaseUrlString:String = "" {
+        didSet {
+            launchGame()
+        }
+    }
+    
     var moviesList:NSArray = [] {
         didSet {
             launchGame()
@@ -20,6 +26,12 @@ class QuizzSettingsViewController: UIViewController {
     }
 
     var actorsList:NSArray = [] {
+        didSet {
+            launchGame()
+        }
+    }
+    
+    var actorCastings:NSArray = [] {
         didSet {
             launchGame()
         }
@@ -65,8 +77,9 @@ class QuizzSettingsViewController: UIViewController {
             var game = QuizzGame();
             
             // Fill default game value
-            game.roundCount = 1;
-            game.scoreCount = 0;
+            game.roundCount = 1
+            game.scoreCount = 0
+            game.timePlayed = 0
             
             // Set attributes from ui controls
             if (self.limitedTimeSwitchButton.on) {
@@ -77,6 +90,7 @@ class QuizzSettingsViewController: UIViewController {
             }
             
             // Set game ressources to QuizzStartedViewController
+            (segue.destinationViewController as! QuizzStartedViewController).imbdImagesBaseUrlString = self.imbdImagesBaseUrlString
             (segue.destinationViewController as! QuizzStartedViewController).moviesList = self.moviesList
             (segue.destinationViewController as! QuizzStartedViewController).actorsList = self.actorsList
             (segue.destinationViewController as! QuizzStartedViewController).gameItem = game
@@ -87,7 +101,6 @@ class QuizzSettingsViewController: UIViewController {
         if (self.moviesList.count > 0 && self.actorsList.count > 0) {
             // now we can laucnh a game
             if (startGameButton.enabled == false) {
-                println(startGameButton.titleLabel?.text)
                 performSegueWithIdentifier("startQuizz", sender: self)
             }
             
@@ -119,6 +132,7 @@ class QuizzSettingsViewController: UIViewController {
     func prepareGame() {
         println("Preparing ressources for the game")
         
+        self.setImbdImagesBaseUrl()
         self.setPopularMoviesList(1)
         self.setPopularActorsList(1)
     }
@@ -152,7 +166,7 @@ class QuizzSettingsViewController: UIViewController {
             }
         })
     }
-
+    
     func setPopularActorsList(pageValue: Int)
     {
         var paramaters = ["page": pageValue]
@@ -165,6 +179,33 @@ class QuizzSettingsViewController: UIViewController {
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
                 if let actors: NSArray? = jsonResult["results"] as? NSArray {
                     self.actorsList = actors!
+                    
+                    var actorsCount = actors?.count
+                    
+                    var stop: Bool
+                    actors?.enumerateObjectsUsingBlock({ (actor, index, stop) -> Void in
+                        //println(actor)
+                        
+                        //println(actor["name"])
+                        //println(actor["profile_path"])
+                    })
+                }
+            }
+        })
+    }
+
+    func setImbdImagesBaseUrl() -> Void {
+        
+        self.imbdClient?.GET(ILMovieDB.kILMovieDBConfiguration, parameters: nil, block: { (responseObject, error) -> Void in
+            if (error != nil) {
+                println("kILMovieDBConfiguration error")
+            }
+            
+            if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
+                //println(jsonResult["images"])
+                if let images: NSDictionary? = jsonResult["images"] as? NSDictionary {
+                    var base_url = images?.objectForKey("base_url") as! String
+                    self.imbdImagesBaseUrlString = base_url.stringByAppendingString("w185")
                 }
             }
         })
