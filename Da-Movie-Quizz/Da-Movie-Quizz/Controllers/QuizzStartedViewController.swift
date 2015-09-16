@@ -17,6 +17,7 @@ class QuizzStartedViewController: UIViewController {
     var gameItem: QuizzGame?
     var moviesList = NSArray()
     var actorsList = NSArray()
+    var actorCredits = NSMutableDictionary()
     var imbdImagesBaseUrlString = String()
 
     @IBOutlet weak var scoreCountLabel: UILabel!
@@ -30,11 +31,29 @@ class QuizzStartedViewController: UIViewController {
     @IBAction func trueAnswerButtonTouchedDown(sender: AnyObject) {
         println("trueAnswerButtonTouchedDown")
         
+        if self.hasActorPlayedInMovie(self.actorImageView.tag, imbdMovieId:self.movieImageView.tag) == true {
+            self.gameItem!.scoreCount += 10
+            self.updateScoreCountLabelText(self.gameItem!.scoreCount)
+            self.loadQuizzQuestion()
+        }
+        else {
+            self.gameOver()
+        }
+        
         self.updateRoundCountLabelText(self.gameItem!.roundCount++)
     }
     
     @IBAction func falseAnswerButtonTouchedDown(sender: AnyObject) {
         println("falseAnswerButtonTouchedDown")
+        
+        if self.hasActorPlayedInMovie(self.actorImageView.tag, imbdMovieId:self.movieImageView.tag) == false {
+            self.gameItem!.scoreCount += 10
+            self.updateScoreCountLabelText(self.gameItem!.scoreCount)
+            self.loadQuizzQuestion()
+        }
+        else {
+            self.gameOver()
+        }
         
         self.updateRoundCountLabelText(self.gameItem!.roundCount++)
     }
@@ -42,10 +61,11 @@ class QuizzStartedViewController: UIViewController {
     @IBAction func skipButtonTouchedDown(sender: AnyObject) {
         println("skipButtonTouchedDown")
         
-        self.gameItem!.scoreCount -= 10;
+        self.gameItem!.scoreCount -= 5;
         
         self.updateRoundCountLabelText(self.gameItem!.roundCount++)
         self.updateScoreCountLabelText(self.gameItem!.scoreCount)
+        self.loadQuizzQuestion()
     }
     
     // GUI : Label handlers
@@ -73,6 +93,7 @@ class QuizzStartedViewController: UIViewController {
         // Get random actor
         let actorsListCount = self.actorsList.count
         let actor: AnyObject = self.actorsList.objectAtIndex(Int(arc4random_uniform(UInt32(actorsListCount))))
+        let actor_id = actor["id"] as! Int;
         let actor_name = actor["name"] as! String;
         let actor_profile_path = actor["profile_path"] as! String;
         
@@ -89,6 +110,7 @@ class QuizzStartedViewController: UIViewController {
         // Get random movie entry
         let moviesListCount = self.moviesList.count
         let movie: AnyObject = self.moviesList.objectAtIndex(Int(arc4random_uniform(UInt32(moviesListCount))))
+        let movie_id = movie["id"] as! Int;
         let movie_original_title = movie["original_title"] as! String;
         let movie_poster_path = movie["poster_path"] as! String;
         
@@ -101,6 +123,10 @@ class QuizzStartedViewController: UIViewController {
                 self.movieImageView.image = UIImage(data: data)
             }
         }
+        
+        // Technique de gros porc, il est bientot 5h du mat...
+        self.actorImageView.tag = actor_id
+        self.movieImageView.tag = movie_id
         
         // Update question statement
         self.statementLabel.text = String(format: "'%@' in '%@' ?!", actor_name, movie_original_title)
@@ -141,9 +167,7 @@ class QuizzStartedViewController: UIViewController {
                 seconds--
                 
                 if(seconds == 0)  {
-                    println("Game over")
-                    timer.invalidate()
-                    performSegueWithIdentifier("gameOver", sender: self)
+                    self.gameOver()
                 }
             }
             else {
@@ -153,6 +177,28 @@ class QuizzStartedViewController: UIViewController {
             game.timePlayed++
             self.timeValueLabel.text = String(format: "%d sec.", seconds)
         }
+    }
+    
+    func gameOver() {
+        println("Game over")
+        timer.invalidate()
+        performSegueWithIdentifier("gameOver", sender: self)
+    }
+    
+    func hasActorPlayedInMovie(imbdActorId:Int, imbdMovieId:Int) -> Bool {
+        
+        var result = false
+        var stop: Bool
+        
+        self.actorCredits[imbdActorId]?.enumerateObjectsUsingBlock({ (credit, index, stop) -> Void in
+            let movie_id = credit["id"] as! Int
+            
+            if (movie_id == imbdMovieId) {
+                result = true
+            }
+        })
+        
+        return result
     }
     
     func configureView() {
@@ -188,7 +234,5 @@ class QuizzStartedViewController: UIViewController {
             (segue.destinationViewController as! QuizzEndedViewController).gameItem = self.gameItem
         }
     }
-
-
 }
 

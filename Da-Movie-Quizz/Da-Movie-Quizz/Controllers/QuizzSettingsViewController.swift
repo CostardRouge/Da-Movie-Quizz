@@ -31,7 +31,7 @@ class QuizzSettingsViewController: UIViewController {
         }
     }
     
-    var actorCastings:NSArray = [] {
+    var actorCredits = NSMutableDictionary()  {
         didSet {
             launchGame()
         }
@@ -91,6 +91,7 @@ class QuizzSettingsViewController: UIViewController {
             
             // Set game ressources to QuizzStartedViewController
             (segue.destinationViewController as! QuizzStartedViewController).imbdImagesBaseUrlString = self.imbdImagesBaseUrlString
+            (segue.destinationViewController as! QuizzStartedViewController).actorCredits = self.actorCredits
             (segue.destinationViewController as! QuizzStartedViewController).moviesList = self.moviesList
             (segue.destinationViewController as! QuizzStartedViewController).actorsList = self.actorsList
             (segue.destinationViewController as! QuizzStartedViewController).gameItem = game
@@ -99,14 +100,18 @@ class QuizzSettingsViewController: UIViewController {
     
     func launchGame() {
         if (self.moviesList.count > 0 && self.actorsList.count > 0) {
-            // now we can laucnh a game
-            if (startGameButton.enabled == false) {
-                performSegueWithIdentifier("startQuizz", sender: self)
-            }
             
-            // Re validate start game button
-            startGameButton.enabled = true
-            startGameButton.setTitle("Start", forState: .Normal)
+            // all credits downloaded
+            if (self.actorCredits.count == 20) {
+                // now we can laucnh a game
+                if (startGameButton.enabled == false) {
+                    performSegueWithIdentifier("startQuizz", sender: self)
+                }
+                
+                // Re validate start game button
+                startGameButton.enabled = true
+                startGameButton.setTitle("Start", forState: .Normal)
+            }
         }
         else
         {
@@ -148,21 +153,7 @@ class QuizzSettingsViewController: UIViewController {
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
                 if let movies: NSArray? = jsonResult["results"] as? NSArray {
                     self.moviesList = movies!
-                    
-//                    var moviesCount = movies?.count
-//                    
-//                    var stop: Bool
-//                    movies?.enumerateObjectsUsingBlock({ (movie, index, stop) -> Void in
-////                        println(movie)
-//                        
-//                        println(movie["original_title"])
-//                        
-////                        println(movie["original_language"])
-////                        println(movie["id"])
-////                        println(movie["poster_path"])
-//                    })
                 }
-                
             }
         })
     }
@@ -178,17 +169,15 @@ class QuizzSettingsViewController: UIViewController {
             
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
                 if let actors: NSArray? = jsonResult["results"] as? NSArray {
-                    self.actorsList = actors!
-                    
-                    var actorsCount = actors?.count
+                    //var actorsCount = actors?.count
                     
                     var stop: Bool
                     actors?.enumerateObjectsUsingBlock({ (actor, index, stop) -> Void in
-                        //println(actor)
-                        
-                        //println(actor["name"])
-                        //println(actor["profile_path"])
+                        let imbdActorId = actor["id"] as! Int
+                        self.findAndAddActorCredits(imbdActorId)
                     })
+                    
+                    self.actorsList = actors!
                 }
             }
         })
@@ -206,6 +195,25 @@ class QuizzSettingsViewController: UIViewController {
                 if let images: NSDictionary? = jsonResult["images"] as? NSDictionary {
                     var base_url = images?.objectForKey("base_url") as! String
                     self.imbdImagesBaseUrlString = base_url.stringByAppendingString("w185")
+                }
+            }
+        })
+    }
+    
+    func findAndAddActorCredits(imbdActorId: Int) -> Void {
+    
+        var actor_credits_api_url = ILMovieDB.kILMovieDBPeopleMovieCredits.stringByReplacingOccurrencesOfString(":id", withString: String(imbdActorId))
+        
+        self.imbdClient?.GET(actor_credits_api_url, parameters: nil, block: { (responseObject, error) -> Void in
+            if (error != nil) {
+                println("kILMovieDBPeopleMovieCredits error")
+            }
+            
+            if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
+                //println(jsonResult["cast"])
+                if let actor_cast: NSArray? = jsonResult["cast"] as? NSArray {
+                    //println(actor_cast)
+                    self.actorCredits[imbdActorId] = actor_cast
                 }
             }
         })
