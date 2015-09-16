@@ -33,7 +33,7 @@ class QuizzStartedViewController: UIViewController {
     @IBAction func trueAnswerButtonTouchedDown(sender: AnyObject) {
         println("trueAnswerButtonTouchedDown")
         
-        self.updateRoundCountLabelText(self.gameItem!.roundCount++)
+        self.updateRoundCountLabelText(++self.gameItem!.roundCount)
         
         if self.hasActorPlayedInMovie(self.actorImageView.tag, imbdMovieId:self.movieImageView.tag) == true {
             self.gameItem!.scoreCount += 10
@@ -50,7 +50,7 @@ class QuizzStartedViewController: UIViewController {
     @IBAction func falseAnswerButtonTouchedDown(sender: AnyObject) {
         println("falseAnswerButtonTouchedDown")
         
-        self.updateRoundCountLabelText(self.gameItem!.roundCount++)
+        self.updateRoundCountLabelText(++self.gameItem!.roundCount)
         
         if self.hasActorPlayedInMovie(self.actorImageView.tag, imbdMovieId:self.movieImageView.tag) == false {
             self.gameItem!.scoreCount += 10
