@@ -22,7 +22,7 @@ enum eActorsGender {
 
 class QuizzGame: NSObject {
     
-    var roundCount:Int = 0
+    var roundCount:Int = 1
     var scoreCount:Int = 0
     var timePlayed:Int = 0
     

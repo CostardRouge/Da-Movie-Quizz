@@ -69,14 +69,8 @@ class QuizzSettingsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "startQuizz" {
-            
             // Create the game item
             var game = QuizzGame();
-            
-            // Fill default game value
-            game.roundCount = 1
-            game.scoreCount = 0
-            game.timePlayed = 0
             
             // Set attributes from ui controls
             if (self.limitedTimeSwitchButton.on) {
