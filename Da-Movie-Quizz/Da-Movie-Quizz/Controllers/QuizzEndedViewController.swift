@@ -53,6 +53,17 @@ class QuizzEndedViewController: UIViewController {
         println("QuizzEndedViewController viewDidLoad")
         self.configureView()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        println("QuizzEndedViewController viewWillAppear")
+        
+        var leftButton = UIBarButtonItem(title: "Replay", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("popToRoot"))
+        self.navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    func popToRoot() {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -31,7 +31,7 @@ class QuizzSettingsViewController: UIViewController {
         }
     }
     
-    var actorCredits = NSMutableDictionary()
+    //var actorCredits = NSMutableDictionary()
     var movieCredits = NSMutableDictionary()
 
     @IBOutlet weak var limitedTimeSwitchButton: UISwitch!
@@ -89,7 +89,7 @@ class QuizzSettingsViewController: UIViewController {
             // Set game ressources to QuizzStartedViewController
             (segue.destinationViewController as! QuizzStartedViewController).imbdImagesBaseUrlString = self.imbdImagesBaseUrlString
             (segue.destinationViewController as! QuizzStartedViewController).movieCredits = self.movieCredits
-            (segue.destinationViewController as! QuizzStartedViewController).actorCredits = self.actorCredits
+            //(segue.destinationViewController as! QuizzStartedViewController).actorCredits = self.actorCredits
             (segue.destinationViewController as! QuizzStartedViewController).moviesList = self.moviesList
             (segue.destinationViewController as! QuizzStartedViewController).actorsList = self.actorsList
             (segue.destinationViewController as! QuizzStartedViewController).gameItem = game
@@ -156,8 +156,6 @@ class QuizzSettingsViewController: UIViewController {
                         self.findAndAddMovieCredits(imbdMovieId)
                     })
                     
-                    
-                    
                     self.moviesList = movies!
                 }
             }
@@ -177,11 +175,11 @@ class QuizzSettingsViewController: UIViewController {
                 if let actors: NSArray? = jsonResult["results"] as? NSArray {
                     //var actorsCount = actors?.count
                     
-                    var stop: Bool
-                    actors?.enumerateObjectsUsingBlock({ (actor, index, stop) -> Void in
-                        let imbdActorId = actor["id"] as! Int
-                        self.findAndAddActorCredits(imbdActorId)
-                    })
+//                    var stop: Bool
+//                    actors?.enumerateObjectsUsingBlock({ (actor, index, stop) -> Void in
+//                        let imbdActorId = actor["id"] as! Int
+//                        self.findAndAddActorCredits(imbdActorId)
+//                    })
                     
                     self.actorsList = actors!
                 }
@@ -219,7 +217,7 @@ class QuizzSettingsViewController: UIViewController {
                 //println(jsonResult["cast"])
                 if let actor_cast: NSArray? = jsonResult["cast"] as? NSArray {
                     //println(actor_cast)
-                    self.actorCredits[imbdActorId] = actor_cast
+                    //self.actorCredits[imbdActorId] = actor_cast
                 }
             }
         })

@@ -241,6 +241,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Quizz game" image="first" id="wSn-ho-DIc">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="fF5-vj-Utc"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -256,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjT-vz-9ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="-251"/>
+            <point key="canvasLocation" x="1263" y="-251"/>
         </scene>
         <!--GameEnded-->
         <scene sceneID="SmH-IM-HeL">
@@ -306,7 +309,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Fc-y7-xyN">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time played" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Fc-y7-xyN">
                                 <rect key="frame" x="94" y="398" width="138" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -343,6 +346,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="navigationItem" destination="FEC-b4-itd" id="HWM-HG-mNI"/>
                         <outlet property="roundValueLabel" destination="PJE-s6-5fm" id="m9r-Yh-ixW"/>
                         <outlet property="scoreValueLabel" destination="hjx-CZ-h0K" id="XAS-BC-INK"/>
                         <outlet property="timeValueLabel" destination="RM7-gO-N13" id="8Ev-s2-J2k"/>
