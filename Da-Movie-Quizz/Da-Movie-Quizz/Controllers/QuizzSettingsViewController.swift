@@ -63,22 +63,16 @@ class QuizzSettingsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "startQuizz" {
             // Create the game item
-            var game = QuizzGame();
+            let game = QuizzGame();
             
             // Set attributes from ui controls
-            if (self.limitedTimeSwitchButton.on) {
-                game.timeMode = .Limited
-            }
-            else {
-                game.timeMode = .Unlimited
-            }
+            game.timeMode = self.limitedTimeSwitchButton.on ? .Limited : .Unlimited
             
             // Set game ressources to QuizzStartedViewController
             (segue.destinationViewController as! QuizzStartedViewController).imbdImagesBaseUrlString = self.imbdImagesBaseUrlString
