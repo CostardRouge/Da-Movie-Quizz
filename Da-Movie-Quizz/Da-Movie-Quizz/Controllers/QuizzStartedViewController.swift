@@ -139,9 +139,9 @@ class QuizzStartedViewController: UIViewController {
         // Tails coin = false -> movie cast mechanism
         else if (self.headsOrTailsCoin == false) {
             let movieCredit: NSArray? = self.movieCredits[imbdMovieId] as? NSArray
-            let movieCreditCount = movieCredit!.count
+            //let movieCreditCount = movieCredit!.count
             //var actor: AnyObject = movieCredit!.objectAtIndex(Int(arc4random_uniform(UInt32(movieCreditCount))))
-            var actor: AnyObject = movieCredit!.objectAtIndex(0)
+            let actor: AnyObject = movieCredit!.objectAtIndex(0)
             choosenActor = actor as! NSDictionary
         }
         
@@ -174,8 +174,8 @@ class QuizzStartedViewController: UIViewController {
     
     func subtractTime() {
         if ((moviesList.count == 0) || (actorsList.count == 0)) {
-            println("moviesList \(moviesList.count )")
-            println("actorsList \(actorsList.count )")
+            print("moviesList \(moviesList.count )")
+            print("actorsList \(actorsList.count )")
         }
         else if let game: QuizzGame = self.gameItem {
             
@@ -203,7 +203,7 @@ class QuizzStartedViewController: UIViewController {
     func hasActorPlayedInMovie(imbdActorId:Int, imbdMovieId:Int) -> Bool {
         
         var result = false
-        var stop: Bool
+        //var stop: Bool
         
         if let movie: NSArray? = self.movieCredits[imbdMovieId] as? NSArray {
             movie!.enumerateObjectsUsingBlock({ (credit, index, stop) -> Void in
@@ -229,16 +229,16 @@ class QuizzStartedViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        println("QuizzStartedViewController viewDidLoad")
+        print("QuizzStartedViewController viewDidLoad")
         
         self.configureView()
         self.setupGame()
     }
     
     override func viewWillAppear(animated: Bool) {
-        println("QuizzStartedViewController viewWillAppear")
+        print("QuizzStartedViewController viewWillAppear")
         
-        var leftButton = UIBarButtonItem(title: "Back to settings", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("popToRoot"))
+        let leftButton = UIBarButtonItem(title: "Back to settings", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("popToRoot"))
         self.navigationItem.leftBarButtonItem = leftButton
     }
     

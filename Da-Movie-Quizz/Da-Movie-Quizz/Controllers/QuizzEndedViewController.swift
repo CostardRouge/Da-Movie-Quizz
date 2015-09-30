@@ -50,14 +50,14 @@ class QuizzEndedViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        println("QuizzEndedViewController viewDidLoad")
+        print("QuizzEndedViewController viewDidLoad")
         self.configureView()
     }
     
     override func viewWillAppear(animated: Bool) {
-        println("QuizzEndedViewController viewWillAppear")
+        print("QuizzEndedViewController viewWillAppear")
         
-        var leftButton = UIBarButtonItem(title: "Replay", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("popToRoot"))
+        let leftButton = UIBarButtonItem(title: "Replay", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("popToRoot"))
         self.navigationItem.leftBarButtonItem = leftButton
     }
     

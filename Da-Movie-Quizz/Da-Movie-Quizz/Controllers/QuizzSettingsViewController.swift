@@ -49,7 +49,7 @@ class QuizzSettingsViewController: UIViewController {
         }
         else
         {
-            println("QIMBD connection went bad")
+            print("QIMBD connection went bad")
         }
     }
     
@@ -57,7 +57,7 @@ class QuizzSettingsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        println("QuizzSettingsViewController viewDidLoad")
+        print("QuizzSettingsViewController viewDidLoad")
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,7 +105,7 @@ class QuizzSettingsViewController: UIViewController {
         }
         else
         {
-            println("ressources are still neeed")
+            print("ressources are still neeed")
         }
     }
     
@@ -115,7 +115,7 @@ class QuizzSettingsViewController: UIViewController {
         
         // If a default imbd api key is defined, we can started the game
         if let imbd_default_api_key: AnyObject = appGlobals["IMBD_DEFAULT_API_KEY"] {
-            println("imbd_default_api_key", imbd_default_api_key)
+            //println("imbd_default_api_key", imbd_default_api_key)
             
             self.imbdClient = ILMovieDBClient.sharedClient()
             self.imbdClient?.apiKey = imbd_default_api_key as! String
@@ -125,7 +125,8 @@ class QuizzSettingsViewController: UIViewController {
     }
 
     func prepareGame() {
-        println("Preparing ressources for the game")
+        
+        print("Preparing ressources for the game")
         
         self.setImbdImagesBaseUrl()
         self.setPopularMoviesList(1)
@@ -134,16 +135,16 @@ class QuizzSettingsViewController: UIViewController {
     
     func setPopularMoviesList(pageValue: Int)
     {
-        var paramaters = ["page": pageValue]
+        let paramaters = ["page": pageValue]
         
         self.imbdClient?.GET(ILMovieDB.kILMovieDBMoviePopular, parameters: paramaters, block: { (responseObject, error) -> Void in
             if (error != nil) {
-                println("kILMovieDBMoviePopular error")
+                print("kILMovieDBMoviePopular error")
             }
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
                 if let movies: NSArray? = jsonResult["results"] as? NSArray {
                     
-                    var stop: Bool
+                    //var stop: Bool
                     movies?.enumerateObjectsUsingBlock({ (movie, index, stop) -> Void in
                         //print(movie)
                         let imbdMovieId = movie["id"] as! Int
@@ -158,11 +159,11 @@ class QuizzSettingsViewController: UIViewController {
     
     func setPopularActorsList(pageValue: Int)
     {
-        var paramaters = ["page": pageValue]
+        let paramaters = ["page": pageValue]
         
         self.imbdClient?.GET(ILMovieDB.kILMovieDBPeoplePopular, parameters: paramaters, block: { (responseObject, error) -> Void in
             if (error != nil) {
-                println("kILMovieDBPeoplePopular error")
+                print("kILMovieDBPeoplePopular error")
             }
             
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
@@ -185,13 +186,13 @@ class QuizzSettingsViewController: UIViewController {
         
         self.imbdClient?.GET(ILMovieDB.kILMovieDBConfiguration, parameters: nil, block: { (responseObject, error) -> Void in
             if (error != nil) {
-                println("kILMovieDBConfiguration error")
+                print("kILMovieDBConfiguration error")
             }
             
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
                 //println(jsonResult["images"])
                 if let images: NSDictionary? = jsonResult["images"] as? NSDictionary {
-                    var base_url = images?.objectForKey("base_url") as! String
+                    let base_url = images?.objectForKey("base_url") as! String
                     self.imbdImagesBaseUrlString = base_url.stringByAppendingString("w185")
                 }
             }
@@ -200,17 +201,17 @@ class QuizzSettingsViewController: UIViewController {
     
     func findAndAddActorCredits(imbdActorId: Int) -> Void {
         
-        var actor_credits_api_url = ILMovieDB.kILMovieDBPeopleMovieCredits.stringByReplacingOccurrencesOfString(":id", withString: String(imbdActorId))
+        let actor_credits_api_url = ILMovieDB.kILMovieDBPeopleMovieCredits.stringByReplacingOccurrencesOfString(":id", withString: String(imbdActorId))
         
         self.imbdClient?.GET(actor_credits_api_url, parameters: nil, block: { (responseObject, error) -> Void in
             if (error != nil) {
-                println("kILMovieDBPeopleMovieCredits error")
+                print("kILMovieDBPeopleMovieCredits error")
             }
             
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
                 //println(jsonResult["cast"])
                 if let actor_cast: NSArray? = jsonResult["cast"] as? NSArray {
-                    //println(actor_cast)
+                    print(actor_cast)
                     //self.actorCredits[imbdActorId] = actor_cast
                 }
             }
@@ -219,11 +220,11 @@ class QuizzSettingsViewController: UIViewController {
     
     func findAndAddMovieCredits(imbdMovieId: Int) -> Void {
         
-        var movie_credits_api_url = ILMovieDB.kILMovieDBMovieCredits.stringByReplacingOccurrencesOfString(":id", withString: String(imbdMovieId))
+        let movie_credits_api_url = ILMovieDB.kILMovieDBMovieCredits.stringByReplacingOccurrencesOfString(":id", withString: String(imbdMovieId))
         
         self.imbdClient?.GET(movie_credits_api_url, parameters: nil, block: { (responseObject, error) -> Void in
             if (error != nil) {
-                println("kILMovieDBMovieCredits error")
+                print("kILMovieDBMovieCredits error")
             }
             
             if let jsonResult = responseObject as? Dictionary<String, AnyObject> {

@@ -14,7 +14,7 @@ class HighscoresViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        println("HighscoresViewController viewDidLoad")
+        print("HighscoresViewController viewDidLoad")
     }
 
     override func didReceiveMemoryWarning() {
